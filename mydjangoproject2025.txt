@@ -1,0 +1,64 @@
+pages app for public-facing pages (home, services, contact)
+
+appointments app for bookings + admin special dashboard
+
+accounts app for login/register
+
+clean folder organization ready for your CityCare HTML and CSS
+
+
+
+citycare_hospital/
+│
+├── citycare_hospital/                  # Main Django project folder
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│   └── asgi.py
+│
+├── pages/                              # ✅ Static pages (Home, Services, Contact)
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── views.py                        # home, services, contact views
+│   ├── urls.py
+│   ├── templates/pages/
+│   │   ├── home.html                   # based on your big HTML file
+│   │   ├── services.html
+│   │   └── contact.html
+│   └── static/pages/
+│       ├── css/style.css
+│       └── js/script.js
+│
+├── accounts/                           # Handles login, register, doctor/patient profile
+│   ├── models.py
+│   ├── views.py
+│   ├── urls.py
+│   ├── templates/accounts/
+│   │   ├── login.html
+│   │   └── register.html
+│   └── admin.py
+│
+├── appointments/                       # ✅ Handles appointment logic
+│   ├── models.py                       # Appointment model
+│   ├── views.py                        # Booking form, admin dashboard
+│   ├── urls.py
+│   ├── templates/appointments/
+│   │   ├── booking_form.html
+│   │   └── admin_dashboard.html
+│   └── admin.py
+│
+├── static/                             # Global static files (shared)
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── templates/
+│   ├── base.html                       # site-wide header/footer structure
+│   └── includes/
+│       ├── navbar.html
+│       └── footer.html
+│
+├── db.sqlite3
+└── manage.py

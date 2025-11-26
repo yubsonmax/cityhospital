@@ -1,0 +1,55 @@
+citycare_hospital/
+│
+├── citycare_hospital/              # Project core (settings, URLs, etc.)
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+│
+├── accounts/                       # Handles registration, login, doctor/patient profiles
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── templates/accounts/
+│   │   ├── login.html
+│   │   ├── register.html
+│   │   └── dashboard.html
+│   └── static/accounts/
+│       ├── css/
+│       └── js/
+│
+├── appointments/                   # Appointment booking + admin tracking
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── forms.py
+│   ├── models.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── templates/appointments/
+│   │   ├── appointment_form.html
+│   │   ├── doctor_appointments.html
+│   │   ├── admin_dashboard.html     # ✅ Special admin summary page
+│   │   └── appointment_list.html
+│   └── static/appointments/
+│       ├── css/
+│       └── js/
+│
+├── templates/
+│   ├── base.html                    # Shared layout
+│   ├── index.html                   # Your provided CityCare HTML (home page)
+│   └── includes/
+│       ├── navbar.html
+│       └── footer.html
+│
+├── static/                          # Global assets
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── manage.py
